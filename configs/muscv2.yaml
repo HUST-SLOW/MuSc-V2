@@ -1,0 +1,15 @@
+datasets:
+  dataset_name: 'mvtec_3d'  # choice ['mvtec_3d', 'eyecandies']
+  data_path: ./data/mvtec_3d/
+  class_name: 'ALL'
+  img_resize: 224
+models:
+  backbone_name: ['dino_vitbase8', 'point-mae']
+  feature_layers: [3, 7, 11]
+  r_list: [1, 3, 5]
+device: 0
+testing:
+  output_dir: 'output'
+  vis: False
+  vis_type: whole_norm # choice ['single_norm', 'whole_norm']
+  save_excel: True
